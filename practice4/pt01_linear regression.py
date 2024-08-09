@@ -71,6 +71,7 @@ for epoch in range(num_epochs):
     #loss会一层层的反向传播计算每个w的梯度值，并保存到该w的.grad属性中。
     loss.backward()
     #执行一次优化步骤，通过梯度下降法来更新参数的值。因为梯度下降是基于梯度的，所以在执行optimizer.step()函数前应先执行loss.backward()函数来计算梯度。
+    #optim.step()在每个Variable的grad都被计算出来后，更新每个Variable的数值
     optimizer.step()
 
     #每隔5次输出一次损失率
