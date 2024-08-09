@@ -75,7 +75,7 @@ for epoch in range(num_epochs):
 
     #每隔5次输出一次损失率
     if (epoch + 1) % 5 == 0:
-        print('Epoch [%d/%d], Loss: %.4f'.format(epoch + 1, num_epochs, loss.item()))
+        print('Epoch [%d/%d], Loss: %.4f'%(epoch + 1, num_epochs, loss.item()))
 
 # Plot the graph
 
