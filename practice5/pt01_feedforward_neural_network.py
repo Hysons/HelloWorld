@@ -36,9 +36,12 @@ class Net(torch.nn.Module):
         self.relu = torch.nn.ReLU()
 
     def forward(self,x):
+        print("x的尺寸：",x.shape)
         out = self.fc1(x)
+        print("第一次的尺寸：",out.shape)
         out = self.relu(out)
         out = self.fc2(out)
+        print("第二次的尺寸：",out.shape)
         return out
 
 #建立前馈神经网络的模型
